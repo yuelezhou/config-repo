@@ -1,14 +1,18 @@
 spring:
   application:
-    name: config
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: yuele729
+    url: jdbc:mysql://127.0.0.1:3306/SpringCloud_Sell?charactorEncoding=utf-8&useSSL=false
   cloud:
     config:
-      server:
-        git:
-          uri: https://github.com/yuelezhou/config-repo.git
-          username: yuelezhou@163.com
-          password: yuele729
-          basedir: /Users/zhoule/IdeaProjects/imooc/Spring_Cloud_Finchley/config/basedir
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+
 eureka:
   client:
     service-url:
