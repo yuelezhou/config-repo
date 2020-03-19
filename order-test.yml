@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yuelezhou/config-repo.git
+          username: yuelezhou@163.com
+          password: yuele729
+          basedir: /Users/zhoule/IdeaProjects/imooc/Spring_Cloud_Finchley/config/basedir
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+env:
+  test
