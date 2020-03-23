@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    product:
+      path: /myProduct/**
+      serviceId: product
+    user:
+      path: /user/**
+      serviceId: user
+  ignored-patterns:
+    - /**/product/listForOrder
+  sensitive-headers:
+  #全部服务忽略敏感头（全部服务都可以传递cookie）
